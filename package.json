@@ -1,0 +1,9 @@
+{
+  "name": "violetbot-vercel-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "VioletBot full Vercel deployment with auth middleman",
+  "engines": {
+    "node": "22.x"
+  }
+}
