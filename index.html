@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VioletBot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-sideart site-sideart-left" aria-hidden="true">
+    <img src="images/brand/mystic.png" alt="" />
+  </div>
+  <div class="site-sideart site-sideart-right" aria-hidden="true">
+    <img src="images/brand/witch.png" alt="" />
+  </div>
+
+  
+  <div class="auth-gate" id="authGate">
+    <div class="auth-card">
+      <div class="auth-kicker">VIOLETBOT</div>
+      <h2 class="auth-title">Member Login</h2>
+      <div class="auth-subtitle">Login with your bot account to open the class database.</div>
+      <form class="auth-form" id="authForm">
+        <label class="auth-label">Username</label>
+        <input class="auth-input" id="authUsername" autocomplete="username" required />
+        <label class="auth-label">Password</label>
+        <input class="auth-input" id="authPassword" type="password" autocomplete="current-password" required />
+        <button class="btn btn-primary auth-submit" id="authSubmit" type="submit">Login</button>
+        <div class="auth-message" id="authMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="page hidden" id="sitePage">
+    <nav class="top-nav" id="topNav"></nav>
+
+    <section class="hero">
+      <div class="kicker">VIOLETBOT</div>
+      <div class="hero-grid">
+        <div>
+          <div class="brand-logo-wrap">
+            <img class="brand-logo" src="images/brand/logo.png" alt="VioletBot Classes" />
+          </div>
+          <p>Only Classes shown here are supported<br>Class database<br>Constantly Updated<br>Guides included.</p>
+        </div>
+        <div class="hero-badge-animated">
+          <div class="hero-big-animated">18 Classes supported</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="subline">Updated version database of supported bot classes with guides of VioletBot.</div>
+    <div class="subline" style="font-size:16px;opacity:.95;">Download or open skill setup for guidance</div>
+
+    <div id="statusMount"></div>
+    <main class="grid" id="classGrid"></main>
+  </div>
+
+  <div class="modal" id="guideModal" aria-hidden="true">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <div class="modal-note" id="modalNote"></div>
+        </div>
+        <button class="btn btn-secondary" id="closeGuideModal">Close</button>
+      </div>
+      <div class="guide-layout">
+        <div>
+          <div class="guide-text-wrap">
+            <h3>Guide</h3>
+            <div class="guide-text" id="guideText"></div>
+          </div>
+          <div class="local-wrap" style="margin-top:18px;">
+            <h3>Your local notes</h3>
+            <textarea id="localNotes" placeholder="Write private notes here..."></textarea>
+            <div class="local-tools" style="margin-top:12px">
+              <input type="file" id="localImageInput" accept="image/*" multiple />
+              <button class="btn btn-primary" id="saveLocal">Save</button>
+              <button class="btn btn-secondary" id="clearLocal">Clear</button>
+            </div>
+            <div class="small" style="margin-top:10px">These notes and uploaded images stay only in your browser on this device.</div>
+            <div class="preview-list" id="localPreview"></div>
+          </div>
+        </div>
+        <div class="image-stack" id="guideSections"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="addonModal" aria-hidden="true">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div><h2 class="modal-title" id="addonTitle"></h2></div>
+        <button class="btn btn-secondary" id="closeAddonModal">Close</button>
+      </div>
+      <div class="note-banner">This addons was taken from the class original discord to get you the most advanced and updated addons</div>
+      <div class="image-stack" id="addonSections"></div>
+    </div>
+  </div>
+
+  <script src="auth-config.js"></script>
+  <script src="md5.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

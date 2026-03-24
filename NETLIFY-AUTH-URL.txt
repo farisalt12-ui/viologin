@@ -1,0 +1,2 @@
+Configured auth URL:
+https://jazzy-brigadeiros-c6846b.netlify.app/.netlify/functions/login

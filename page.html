@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VioletBot Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-sideart site-sideart-left" aria-hidden="true">
+    <img src="images/brand/mystic.png" alt="" />
+  </div>
+  <div class="site-sideart site-sideart-right" aria-hidden="true">
+    <img src="images/brand/witch.png" alt="" />
+  </div>
+
+  
+  <div class="auth-gate" id="authGate">
+    <div class="auth-card">
+      <div class="auth-kicker">VIOLETBOT</div>
+      <h2 class="auth-title">Member Login</h2>
+      <div class="auth-subtitle">Login with your bot account to open the page.</div>
+      <form class="auth-form" id="authForm">
+        <label class="auth-label">Username</label>
+        <input class="auth-input" id="authUsername" autocomplete="username" required />
+        <label class="auth-label">Password</label>
+        <input class="auth-input" id="authPassword" type="password" autocomplete="current-password" required />
+        <button class="btn btn-primary auth-submit" id="authSubmit" type="submit">Login</button>
+        <div class="auth-message" id="authMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="page hidden" id="sitePage">
+    <nav class="top-nav" id="topNav"></nav>
+    <section class="hero">
+      <div class="kicker">VIOLETBOT</div>
+      <div class="hero-grid">
+        <div>
+          <h1 id="pageTitle">Page</h1>
+          <p id="pageHeroText">Loading...</p>
+        </div>
+        <div class="hero-badge-animated">
+          <div class="hero-big-animated" id="pageStatus">Coming Soon</div>
+        </div>
+      </div>
+    </section>
+    <div class="page-card">
+      <img id="pageImage" class="guide-image hidden" alt="Page image" />
+      <div id="pageBody" class="guide-text" style="margin-top:16px"></div>
+    </div>
+  </div>
+  <script src="auth-config.js"></script>
+  <script src="md5.js"></script>
+  <script src="page.js"></script>
+</body>
+</html>
